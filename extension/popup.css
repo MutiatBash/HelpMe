@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  border: none;
+  border-radius: 4px;
+}
+.popup {
+  padding: 1rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: row;
+  /* border: none; */
+  border-radius: 4px;
+  gap: 0.5rem;
+}
+.btn {
+  margin: 2px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #08051e;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+}
