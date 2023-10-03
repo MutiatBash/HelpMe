@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "./Button";
 import logo from "../assets/help_logo.svg";
+import facebook from "../assets/facebook.svg";
 // import { ThreeCircles, Oval } from "react-loader-spinner";
 
 export const SignUp = () => {
@@ -44,11 +45,13 @@ export const SignUp = () => {
         </p>
         <div className="w-full flex flex-col gap-4 sm:gap-7 my-2">
           <Button
-            customClassName="bg-white border font-[500] sm:border-2 border-[#08051e] text-[#08051e] p-2 sm:p-3 w-full rounded-lg sm:rounded-xl sm:font-bold"
+            src={facebook}
+            customClassName="bg-white border flex flex-row gap-5 justify-center items-center font-[500] sm:border-2 border-[#08051e] text-[#08051e] p-2 sm:p-3 w-full rounded-lg sm:rounded-xl sm:font-bold"
             text="Continue with Google"
           />
           <Button
-            customClassName="bg-white border font-[500] sm:border-2 border-[#08051e] text-[#08051e] p-2 sm:p-3 w-full rounded-lg sm:rounded-xl sm:font-bold"
+            src={facebook}
+            customClassName="bg-white border flex flex-row gap-5 justify-center items-center font-[500] sm:border-2 border-[#08051e] text-[#08051e] p-2 sm:p-3 w-full rounded-lg sm:rounded-xl sm:font-bold"
             text="Continue with Facebook"
           />
         </div>
@@ -70,7 +73,6 @@ export const SignUp = () => {
             placeholder="Enter your email address"
             className="border rounded-lg sm:rounded-xl p-2 sm:p-3 w-full focus:outline-none focus:border-gray-600"
             value={email}
-            required={true}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -80,7 +82,6 @@ export const SignUp = () => {
             placeholder="Password"
             className="border rounded-lg sm:rounded-xl p-2 sm:p-3 w-full focus:outline-none focus:border-gray-600"
             type="password"
-            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

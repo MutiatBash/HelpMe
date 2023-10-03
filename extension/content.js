@@ -25,10 +25,8 @@ function onAccessApproved(stream) {
   //     console.log(event.data);
   //   });
 
-  recorder.start();
-addControls();
-
-
+  // recorder.start();
+  addControls();
 
   recorder.onstop = function () {
     stream.getTracks().forEach(function (track) {
@@ -64,7 +62,6 @@ addControls();
   //     .catch((error) => {
   //       console.error;
   //     });
-   
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -82,7 +79,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       .then((stream) => {
         onAccessApproved(stream);
       });
-
   }
 
   if (message.action === "stop_recording") {

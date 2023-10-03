@@ -5,14 +5,19 @@ import { useState, useContext, useEffect } from "react";
 import share from "../assets/easy_share.svg";
 import record from "../assets/record-circle.svg";
 import revisit from "../assets/revisit.svg";
-import steps from "../assets/how_it_works.png";
+// import steps from "../assets/how_it_works.png";
+import features from "../assets/video-repository.png";
+import steps from "../assets/steps.svg";
+import womanblue from "../assets/woman_blue.svg";
+import womanorange from "../assets/woman_orange.svg";
+import man from "../assets/father_son.svg";
 
 export const Landing = () => {
   const [loading, setLoading] = useState(true);
   return (
     <div className="bg-gray-100 ">
       <Navbar />
-      <div className="flex flex-col mt-16 gap-10">
+      <div className="flex flex-col mt-20 gap-10">
         <Hero />
         <Features />
         <Works />
@@ -25,10 +30,10 @@ export const Landing = () => {
 // HERO
 export const Hero = () => {
   return (
-    <div className=" bg-white md:px-8">
+    <div className=" bg-white md:px-8 py-10">
       <div className="p-4 sm:p-14 sm:pt-10 sm:py-16 flex flex-col sm:flex-row justify-between gap-6 items-center h-full">
-        <div className=" flex flex-col gap-8 sm:w-[50%]">
-          <h1 className="font-bold text-[3.5rem] leading-[4.105625rem] tracking-wide text-[#08051e]">
+        <div className=" flex flex-col gap-8 sm:w-[45%]">
+          <h1 className="font-bold text-[3.89rem] leading-[4.105625rem] tracking-wide text-[#08051e]">
             Show Them Don't Just Tell
           </h1>
           <p className="sm:w-[85%]">
@@ -42,8 +47,16 @@ export const Hero = () => {
             />
           </div>
         </div>
-        <div className="sm:w-[40%] absolute right-12 top-[10%]">
-          {/* <img src={heroImg} className="" /> */}
+        <div className="sm:w-[50%]">
+          <div className="flex flex-row gap-4 items-center w-full justify-end">
+            <div className="flex flex-col gap-4 items-stretch">
+              <img src={womanblue} className="rounded-lg" />
+              <img src={man} className="rounded-lg" />
+            </div>
+            <div>
+              <img src={womanorange} className="rounded-lg" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -79,8 +92,8 @@ export const Features = () => {
               how to get things done on a website"
           />
         </div>
-        <div className="sm:w-[40%] absolute right-12 top-[10%]">
-          {/* <img src={heroImg} className="" /> */}
+        <div className="sm:w-[40%]">
+          <img src={features} className="" />
         </div>
       </div>
     </div>
